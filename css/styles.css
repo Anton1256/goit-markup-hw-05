@@ -38,6 +38,28 @@ button {
   font-family: inherit;
   cursor: pointer;
   border: none;
+  color: currentColor;
+  text-align: center;
+}
+
+input {
+  font-family: inherit;
+}
+
+input:hover::placeholder,
+input:focus::placeholder {
+  color: #4d5ae5;
+}
+
+input:focus-within,
+input:focus-within {
+  color: #4d5ae5;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 
 address {
@@ -506,6 +528,7 @@ footer {
   display: flex;
   gap: 16px;
   fill: #f4f4fd;
+  margin-right: 80px;
 }
 .social-item {
 }
@@ -526,4 +549,94 @@ footer {
 .social-link:hover,
 .social-link:focus {
   background-color: #31d0aa;
+}
+
+.sub-container {
+}
+.sub {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.sub-form {
+  display: flex;
+  gap: 24px;
+}
+.sub-label {
+}
+
+.sub-form .sub-label {
+}
+
+.sub-email {
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  padding: 8px 0 8px 16px;
+}
+
+.sub-email::placeholder {
+  color: #ffffff;
+}
+
+.button-tg {
+  background-color: #4d5ae5;
+  border-radius: 4px;
+  padding: 8px 24px;
+  width: 165px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.icon-tg {
+  fill: #ffffff;
+}
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 480px;
+  max-height: 80%;
+  overflow-y: auto;
 }
