@@ -467,7 +467,7 @@
         </div>
         <div class="sub-container">
           <p class="sub">Subscribe</p>
-          <form class="sub-form">
+          <form class="sub-form" name="sub-form">
             <label class="sub-label">
               <input
                 class="sub-email"
@@ -488,10 +488,89 @@
     </footer>
     <div class="modal-overlay container is-open">
       <div class="modal">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
-        illum praesentium, mollitia repellat expedita aperiam nam at iure alias
-        ullam porro perspiciatis veritatis animi, unde cumque architecto illo
-        dicta ipsam!
+        <button type="button" class="mod-button">
+          <svg class="close" width="8" height="8">
+            <use href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+        <p class="mod-title">Leave your contacts and we will call you back</p>
+        <form class="mod-form" name="mod-form">
+          <div class="form-wrapper-cont">
+            <label class="mod-label" for="name">Name</label>
+            <div class="mod-user-icon-wrapper">
+              <input
+                type="text"
+                class="mod-input"
+                id="name"
+                name="name"
+                required
+              />
+              <svg class="mod-user-icon" width="12" height="12">
+                <use href="./images/icons.svg#profile"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="form-wrapper-cont">
+            <label class="mod-label" for="mod-phone">Phone</label>
+            <div class="mod-user-icon-wrapper">
+              <input
+                type="number"
+                class="mod-input"
+                id="mod-phone"
+                name="mod-phone"
+                required
+              />
+              <svg class="mod-user-icon" width="13" height="13">
+                <use href="./images/icons.svg#phone"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="form-wrapper-cont">
+            <label class="mod-label" for="mod-email">Email</label>
+            <div class="mod-user-icon-wrapper">
+              <input
+                type="email"
+                class="mod-input"
+                id="mod-email"
+                name="mod-email"
+                required
+              />
+              <svg class="mod-user-icon" width="15" height="12">
+                <use href="./images/icons.svg#email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-wrapper-cont">
+            <label class="mod-label" for="mod-comment">Comment</label>
+            <textarea
+              class="mod-comment"
+              name="comment"
+              id="mod-comment"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+          <div class="mod-wrapper-checkbox">
+            <input
+              type="checkbox"
+              id="mod-checkbox"
+              name="checkbox"
+              class="checkbox visually-hidden"
+              required
+            />
+            <label class="mod-checkbox" for="mod-checkbox"
+              ><span class="custom-checkbox"
+                ><svg class="custom-checkbox-icon" width="10" height="8">
+                  <use href="./images/icons.svg#check"></use></svg></span
+              >I accept the terms and conditions of the
+              <a class="policy" href="#">Privacy Policy</a></label
+            >
+          </div>
+          <div class="mod-button-submit">
+            <button type="submit" class="mod-send">Send</button>
+          </div>
+        </form>
       </div>
     </div>
   </body>
